@@ -1,0 +1,461 @@
+@charset "utf-8";
+
+
+
+/* ページ共通のカラーリング */
+
+
+:root {
+    /* width */
+    --content-width-PC: 1100px;
+    --min-content-width: 320px;
+    /* ※スマートフォンの最小幅は320px */
+    --content-width-TABLET: 100vw;
+    /* color */
+    --page-color: rgb(149, 153, 216);
+    --main-color: #547557;
+    --main-color-lighter: #6d8b64;
+    --main-color-hover: #75a67b;
+    --sub-color: #E1EFEF;
+    --sub-color2: #1c9f94;
+    --sub-color3: hsl(51, 33%, 58%);
+    --sub-color4: #8b7546;
+    --line-green: #61d94f;
+    --black: #666;
+    --white: #fff;
+    --right-gray: #cccccc;
+    /* text-shadow */
+    --shadow1: 0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333, 5px 4px 2px var(--black);
+    --shadow2: 0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+    /* spacing */
+    --spacingL: 90px;
+    --spacingM: 40px;
+    --spacingS: 20px;
+    /* text-size for PC */
+    /* 1rem */
+    --text-size-PC-M: 19px;
+    /* 0.72rem */
+    --text-size-PC-SS: calc(var(--text-size-PC-M)*(0.72));
+    /* 0.92rem */
+    --text-size-PC-S: calc(var(--text-size-PC-M)*(0.921));
+    /* 1.13rem */
+    --text-size-PC-L: calc(var(--text-size-PC-M)*(1.132));
+    /* 1.47rem */
+    --text-size-PC-LL: calc(var(--text-size-PC-M)*(1.474));
+    /* text-size for TABLET */
+}
+
+
+
+/* 🌎全体に適用するスタイル ここから🌎 */
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Meiryo', 'sans-serif', 'Times New Roman';
+    outline: red solid 1px;
+}
+
+/* ↓ 右側に生じる余分なスペースを消すために必要な記述 */
+html{
+    width: 100vw;
+}
+/* ❕ ↑ DO NOT REWRITE ↑ ❕ */
+
+#wrapper{
+    /* width: var(--content-width-PC); */
+    /* min-width: var(--content-width-PC); */
+    min-width: var(--min-content-width);
+    max-width: var(--content-width-PC);
+    margin: auto;
+}
+
+body{
+    font-size: var(--text-size-PC-M);
+    margin: 0;
+    /* border: 3px solid rgb(255, 255, 255); */
+    background: url(images/background-rightgreen.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    color: var(--black);
+}
+
+a{
+    font-size: var(--text-size-PC-M);
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+strong{
+    font-size: var(--text-size-PC-M);
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+small{
+    font-size: var(--text-size-PC-M);
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+li p{
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    /* margin: 0; */
+    /* padding: 0; */
+    vertical-align:top;
+    /* ↑これを指定することで margin, padding 0 指定でも消せない空白を消す */
+    /* 🎀「img」には必ず指定した方が良い！🎀 */
+}
+
+hr{
+    margin: 0;
+}
+
+address{
+    color: var(--black);
+}
+
+/* div{
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+
+/* 🌟子要素にflexを適用するためのclass🌟 */
+/* flex */
+/* 文字・コンテンツは左右上下の中の中央 */
+/* 折り返しあり */
+.flex-center-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* flex */
+/* 文字・コンテンツは左右上下の中の中央 */
+/* 折り返し無し */
+.flex-center{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* 通常のflexのみ */
+.flex{
+    display: flex;
+}
+/* flexで「縦方向」に並べる */
+/* 文字・コンテンツは左右上下の中の中央 */
+.flex-column-center{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+/* 🌟中央揃えを適用するためのclass🌟 */
+.center{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* flexを解除するためのclass */
+.block{
+    display: block;
+}
+/* スペースを【横方向】に均等に配分するためのclass */
+.space-between{
+    justify-content: space-between;
+}
+/* スペースを【縦方向】に均等に配分するためのclass */
+.align-center{
+    align-items: center;
+}
+/* コンテンツを右端に配置 */
+.flex-end{
+    justify-content: flex-end;
+}
+
+/* ❕ ↑ DO NOT REWRITE ↑ ❕ */
+
+
+
+
+/* 🌎全体に適用するスタイル ここまで🌎 */
+
+
+
+/* 📜文字のスタイルの指定 ここから📜 */
+
+h1{
+    font-size: 3.2rem;
+    font-weight: lighter;
+    text-shadow: var(--shadow2);
+    text-decoration: underline solid 2px;
+    text-underline-offset: 0.15em;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--white);
+    font-weight: 400;
+    text-shadow: var(--shadow2);
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0;
+    color: var(--white);
+    text-shadow: var(--shadow2);
+}
+
+
+
+
+/* 📜文字スタイル-ヘッダー部分-ここから📜 */
+
+header h1 a{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+header nav p{
+    color: var(--white);
+    text-shadow: var(--shadow2);
+}
+
+/* 📜文字スタイル-ヘッダー部分-ここまで📜 */
+
+
+
+#artists .text p{
+    font-size: 22px;
+    line-height: 2em;
+}
+
+
+
+
+
+
+/* 📜フッター部分に適用するスタイル ここから📜 */
+
+footer .copyright{
+    font-size: small;
+    color: var(--white);
+    line-height: 2em;
+}
+
+/* 📜フッター部分に適用するスタイル ここまで📜 */
+
+
+
+/* 📜文字のスタイルの指定 ここまで📜*/
+
+
+
+
+/* キービジュアル部分に適用するスタイル ここから */
+
+header{
+    width: auto;
+    padding: 25px 0;
+    /* justify-content: space-between; */
+}
+
+.logo{
+    justify-content: flex-start;
+}
+
+header h1{
+    width: auto;
+    margin: 0;
+    /* margin-left: calc(50vw - calc(0.5*var(--content-width-PC))); */
+    /* 左空白：(ビューポート幅-コンテンツ幅)/2=(100vw-800px)/2 */
+}
+
+header nav{
+    width: calc(100% - 300px);
+    /* ↑logoの大きさをマイナスする */
+    justify-content: flex-end;
+}
+
+header nav ul{
+    
+    
+    
+}
+
+header nav li h2, header nav li p{
+    width: 172px;
+
+}
+
+/* #main-visual-contents{ */
+    /* width: 100vw; */
+    /* height: 836px; */
+    /* background: linear-gradient(to bottom, transparent 0%, transparent 65%, var(--page-color) 91%, var(--page-color) 100%), url(images/background-rightgreen.png); */
+    /* background: url(images/background-rightgreen.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom; */
+    /* margin:0 calc(50% - 50vw); */
+/* } */
+
+#mv-section .img-pc{
+    display: flex;
+    width: var(--content-width-PC);
+    height: 690px;
+}
+
+#mv-section .img-tab{
+    display: none;
+}
+
+
+
+/* キービジュアル部分に適用するスタイル ここまで */
+
+
+
+/* 作者情報に適用するスタイル ここから */
+
+.profile-image{
+    width: 255px;
+    height: 255px;
+}
+
+.artist-l .profile-image{
+    margin: 20px 53px 20px 0;
+}
+
+.artist-r .profile-image{
+    margin: 20px 0px 20px 53px;
+}
+
+
+#artists .text p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* フッター部分に適用するスタイル ここから */
+
+
+footer{
+    background-color:var(--sub-color3);
+}
+
+footer hr{
+    margin: 0;
+    height: auto;
+}
+
+footer .project-name{
+    font-size: var(--text-size-PC-L);
+    text-align: center;
+    font-weight: bold;
+    /* text-shadow: var(--shadow2); */
+    line-height: 1.5em;
+    padding-top: var(--spacingS);
+}
+
+footer hr{
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 10px var(--spacingS);
+}
+
+footer p{
+    height: auto;
+    margin: 0 10px;
+    flex-wrap: nowrap;
+    padding: 2.5px 0;
+}
+
+footer img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+footer .copyright{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+/* フッター部分に適用するスタイル ここまで */
+
+
+
+
+
+@media screen and (max-width: 820px) {
+	/* タブレット・スマホ用CSS：PC版コンテンツ幅 (:799px) 以下に適用される */
+    #wrapper{
+        width: 100vw;
+        /* max-width: calc(var(--content-width-PC) - 1px); */
+        min-width: var(--min-content-width);
+        margin: auto;
+    }
+
+    body{
+        width: var(--content-width-TABLET);
+    }
+    
+    header{
+        width: var(--content-width-TABLET);
+        max-width: var(--content-width-TABLET);
+        min-width: 150px;
+    }
+
+
+    #mv-section .img-tab{
+        display: flex;
+        width: var(--content-width-TABLET);
+        height: auto;
+    }
+
+    #mv-section .img-pc{
+        display: none;
+    }
+    
+
+
+
+}
