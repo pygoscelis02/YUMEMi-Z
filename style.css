@@ -291,6 +291,7 @@ header{
 
 .logo{
     justify-content: flex-start;
+    margin-right: 17px;
 }
 
 header h1{
@@ -338,9 +339,50 @@ header nav li h2, header nav li p{
     display: none;
 }
 
-
-
 /* キービジュアル部分に適用するスタイル ここまで */
+
+
+/* YUMEMi'Z紹介部分に適用するスタイル ここから */
+
+#about-us{
+    width: 420px;
+    margin: 40px auto;
+}
+
+#about-us h4{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow: var(--shadow2);
+}
+
+#about-us .groupname-catch{
+    width: 420px;
+    margin-bottom: 20px;
+}
+
+#about-us p{
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 400;
+    text-shadow: var(--shadow2);
+    line-height: 2em;
+}
+
+#about-us .group-introduction{
+    margin:auto;
+    width: 330px;
+}
+
+#about-us p{
+    margin-top: 20px;
+}
+
+
+/* YUMEMi'Z紹介部分に適用するスタイル ここまで */
+
+
 
 
 
