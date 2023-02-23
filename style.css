@@ -53,13 +53,13 @@
 *{
     box-sizing: border-box;
     font-family: 'Meiryo', 'sans-serif', 'Times New Roman';
-    outline: red solid 1px;
+    /* outline: red solid 1px; */
 }
 
 /* ↓ 右側に生じる余分なスペースを消すために必要な記述 */
-html{
+/* html{
     width: 100vw;
-}
+} */
 /* ❕ ↑ DO NOT REWRITE ↑ ❕ */
 
 #wrapper{
@@ -246,6 +246,10 @@ h4{
     margin: 0;
 }
 
+h5{
+    margin: 0;
+}
+
 
 
 /* 📜文字スタイル-ヘッダー部分-ここから📜 */
@@ -363,7 +367,6 @@ header nav{
 }
 
 #about-us p{
-    font-size: 1.75rem;
     color: var(--white);
     font-weight: 400;
     text-shadow: var(--shadow2);
@@ -371,7 +374,7 @@ header nav{
 
 #about-us .group-introduction{
     margin: 100px auto 0 auto;
-    width: 345px;
+    width: 30%;
 }
 
 #about-us p{
@@ -386,9 +389,31 @@ header nav{
     margin:auto;
 }
 
-
 /* YUMEMi'Z紹介部分に適用するスタイル ここまで */
 
+
+
+/* WHAT'S NEW紹介部分に適用するスタイル ここから */
+
+h5{
+    color: var(--white);
+    text-shadow: var(--shadow2);
+    font-size: 2rem;
+}
+
+#whats-new{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5em;
+}
+
+#whats-new .new-box{
+    margin-top: 1em;
+    padding: 1em 5px;
+    background-color: var(--main-color);
+}
+
+/* WHAT'S NEW紹介部分に適用するスタイル ここまで */
 
 
 
@@ -409,14 +434,14 @@ header nav{
 }
 
 #artists{
-    margin: auto 10px;
+    margin: auto 10px 5em 10px;
 }
 
 /* ↓DO NOT REWRITE */
 /* 作家リスト：作家ごとの項目区切り */
 .artist-r{
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-top: 2.8em;
+    margin-bottom: 2.8em;
 }
 
 .artist-l .profile-image{
@@ -551,7 +576,7 @@ footer .copyright{
 
     header nav p{
         text-shadow: var(--shadow2);
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     /* 📜文字スタイル-ヘッダー部分-ここまで📜 */
@@ -593,7 +618,6 @@ footer .copyright{
     }
 
     #about-us p{
-        font-size: 1.2rem;
         color: var(--white);
         font-weight: 400;
         text-shadow: var(--shadow2);
@@ -601,7 +625,7 @@ footer .copyright{
 
     #about-us .group-introduction{
         margin: 100px auto 0 auto;
-        width: 345px;
+        width: 45%;
     }
 
     #about-us p{
@@ -615,15 +639,22 @@ footer .copyright{
         margin: auto;
     }
 
-
     /* YUMEMi'Z紹介部分に適用するスタイル ここまで */
+
+
+    /* WHAT'S NEW紹介部分に適用するスタイル ここから */
+
+    h5{
+        color: var(--white);
+        text-shadow: var(--shadow2);
+        font-size: 1.5rem;
+    }
+
+    /* WHAT'S NEW紹介部分に適用するスタイル ここまで */
 
 
     /* 作者一覧に適用するスタイル ここから */
 
-    #artists{
-        margin: auto 10px;
-    }
 
     #artists .text p{
         margin-top: 15px;
@@ -651,7 +682,7 @@ footer .copyright{
 @media screen and (max-width: 450px) {
     body{
         width: var(--content-width-TABLET);
-        font-size: 14px;
+        font-size: 1rem;
     }
     #wrapper{
         max-width: var(--content-width-TABLET);
@@ -662,7 +693,7 @@ footer .copyright{
     /* 📜文字スタイル-p-ここから📜 */
 
     p{
-        font-size: 14px;
+        font-size: 0.8rem;
         line-height: 1.75;
     }
 
@@ -684,17 +715,25 @@ footer .copyright{
         margin: 0;
     }
     header h2{
-        font-size: 16px;
+        font-size: 1rem;
         width: auto;
         margin-top: 5px;
     }
     header nav p{
-        font-size: 5px;
+        font-size: 0.5rem;
     }
 
     #about-us .group-introduction {
         margin: 100px auto 0 auto;
-        width: 310px;
+        width: 60%;
+    }
+
+    #whats-new{
+        width: 94%;
+    }
+
+    #whats-new .new-box{
+        padding: 1em 1.5px;
     }
 
     h3{
