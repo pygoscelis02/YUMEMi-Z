@@ -22,7 +22,7 @@
     --sub-color4: #8b7546;
     --line-green: #61d94f;
     --black: #666;
-    --white: #fff;
+    --white: #ffffff;
     --right-gray: #e5e5e5;
     /* text-shadow */
     --shadow1: 0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333, 5px 4px 2px var(--black);
@@ -53,7 +53,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Meiryo', 'sans-serif', 'Times New Roman';
-    /* outline: red solid 1px; */
+    outline: red solid 1px;
 }
 
 /* ↓ 右側に生じる余分なスペースを消すために必要な記述 */
@@ -91,6 +91,7 @@ p{
 }
 
 a{
+    font-size: var(--text-size-PC-M);
     padding: 0;
     margin: 0;
     color: var(--right-gray);
@@ -220,10 +221,9 @@ address{
 /* 📜文字のスタイルの指定 ここから📜 */
 
 h1{
+    font-size: 32px;
     font-weight: lighter;
     text-shadow: var(--shadow2);
-    text-decoration: underline solid 2px;
-    text-underline-offset: 0.15em;
 }
 
 h2{
@@ -255,7 +255,7 @@ h5{
 /* 📜文字スタイル-ヘッダー部分-ここから📜 */
 
 header h1 a{
-    font-size: 3rem;
+    font-size: 1em;
     color: var(--white);
 }
 
@@ -304,6 +304,8 @@ header{
     width: auto;
     padding: 25px 0;
     /* justify-content: space-between; */
+    margin: auto;
+    padding: auto 15px;
 }
 
 .logo{
@@ -321,6 +323,8 @@ header nav{
     width: calc(100% - 180px);
     /* ↑logoの大きさをマイナスする */
     justify-content: flex-end;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 /* header nav li h2, header nav li p{
@@ -421,7 +425,8 @@ h5{
 /* 作者情報に適用するスタイル ここから */
 
 #list-introduction{
-    margin: 4em 2em;
+    margin: 4em auto;
+    width: 76%;
 }
 
 #list-introduction p{
@@ -546,13 +551,18 @@ footer .copyright{
         width: auto;
         max-width: var(--content-width-TABLET);
         min-width: 150px;
-        margin: auto 10px;
-        padding: 15px 0;
+        margin: auto;
+        padding: auto 10px;
     }
     header h1{
         width: 100px;
         margin: 0;
     }
+
+    header h1 a{
+        font-size: 0.75em;
+    }
+
     header nav{
         width: calc(100% - 100px);
         /* ↑logoの大きさをマイナスする */
@@ -562,10 +572,6 @@ footer .copyright{
         font-weight: bolder;
     }
     /* 📜文字スタイル-ヘッダー部分-ここから📜 */
-
-    header h1 a{
-        font-size: 2rem;
-    }
 
     h2{
         font-size: 1.5rem;
@@ -704,7 +710,7 @@ footer .copyright{
         max-width: var(--content-width-TABLET);
         min-width: 320px;
         margin: auto;
-        padding: 0 5px;
+        padding: auto 5px;
     }
     header nav{
         width: calc(100% - 60px);
