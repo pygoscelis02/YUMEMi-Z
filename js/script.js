@@ -45,5 +45,5 @@ if(hour >= 20 && hour <= 23){
     img_element_tab.src = "images/key3-2.jpg";
 }
 
-var img_tab = document.getElementsById("mv-section");
+let img_tab = document.getElementsById("mv-section");
 img_tab.appendChild(img_element_tab);
