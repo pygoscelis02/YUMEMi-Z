@@ -53,7 +53,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Meiryo', 'sans-serif', 'Times New Roman';
-    outline: red solid 1px;
+    /* outline: red solid 1px; */
 }
 
 /* ↓ 右側に生じる余分なスペースを消すために必要な記述 */
@@ -518,7 +518,7 @@ footer .copyright{
 
 
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 720px) {
 	/* タブレット・スマホ用CSS：PC版コンテンツ幅 (:799px) 以下に適用される */
     #wrapper{
         max-width: var(--content-width-TABLET);
