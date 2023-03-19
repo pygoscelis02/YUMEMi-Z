@@ -62,23 +62,20 @@
 } */
 /* ❕ ↑ DO NOT REWRITE ↑ ❕ */
 
-#wrapper{
+#wrapper-list{
     /* width: var(--content-width-PC); */
     /* min-width: var(--content-width-PC); */
     min-width: var(--min-content-width);
-    max-width: var(--content-width-PC);
     margin: auto;
+    background-image: url(images/background-2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 body{
     font-size: var(--text-size-PC-M);
     margin: 0;
     /* border: 3px solid rgb(255, 255, 255); */
-    background: linear-gradient(rgba(0, 0, 0, 0.519),rgba(255, 255, 255, 0.399)), url(images/background-rightgreen.png);
-    backdrop-filter: hue-rotate(188deg) brightness(90%) contrast(120%) invert(20%);
-    background-repeat: repeat;
-    background-size: cover;
-    background-position: bottom;
 }
 
 p{
@@ -338,7 +335,7 @@ header{
 
 #mv-section .img-pc{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
@@ -349,11 +346,25 @@ header{
 /* キービジュアル部分に適用するスタイル ここまで */
 
 
+/* キービジュアル以下背景部分に適用するスタイル ここから */
+
+#main-article{
+    background: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 50% 75%;
+}
+
+/* キービジュアル以下背景部分に適用するスタイル ここまで */
+
+
 /* YUMEMi'Z紹介部分に適用するスタイル ここから */
 
 #about-us{
     width: auto;
-    margin: 100px auto;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #about-us h4{
@@ -401,7 +412,7 @@ h5{
 #whats-new{
     width: 90%;
     margin: auto;
-    margin-bottom: 5em;
+    padding-bottom: 5em;
 }
 
 #whats-new .new-box{
@@ -520,7 +531,7 @@ footer .copyright{
 
 @media screen and (max-width: 720px) {
 	/* タブレット・スマホ用CSS：PC版コンテンツ幅 (:799px) 以下に適用される */
-    #wrapper{
+    #wrapper #wrapper-list{
         max-width: var(--content-width-TABLET);
         min-width: var(--min-content-width);
         margin: auto;
@@ -608,7 +619,9 @@ footer .copyright{
 
     #about-us{
         width: 100%;
-        margin: 100px auto;
+        margin: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     #about-us h4{
@@ -683,7 +696,7 @@ footer .copyright{
         width: var(--content-width-TABLET);
         font-size: 1rem;
     }
-    #wrapper{
+    #wrapper #wrapper-list{
         max-width: var(--content-width-TABLET);
         min-width: var(--min-content-width);
         margin: auto;
