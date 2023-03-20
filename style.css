@@ -472,8 +472,11 @@ h5{
 }
 
 #artists{
-    margin: auto 2em;
+    margin: auto;
+    padding-right: 2em;
+    padding-left: 2em;
     padding-bottom: 5em;
+    max-width: 1080px;
 }
 
 /* ↓DO NOT REWRITE */
