@@ -22,7 +22,7 @@
     --sub-color4: #8b7546;
     --line-green: #61d94f;
     --black: #666;
-    --white: #ffffff;
+    --white: #f6ecec;
     --right-gray: #e5e5e5;
     /* text-shadow */
     --shadow1: 0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333, 5px 4px 2px var(--black);
@@ -416,6 +416,15 @@ header{
 #about-us p{
     margin-top: 6rem;
     margin-bottom: 8rem;
+    width: fit-content;
+    margin: 150px auto;
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 #about-us img{
