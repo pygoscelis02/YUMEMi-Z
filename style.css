@@ -75,6 +75,7 @@
 body{
     font-size: var(--text-size-PC-M);
     margin: 0;
+    background: var(--main-color);
     /* border: 3px solid rgb(255, 255, 255); */
 }
 
@@ -201,6 +202,9 @@ address{
 .space-between{
     justify-content: space-between;
 }
+.space-evenly{
+    justify-content: space-evenly;
+}
 /* スペースを【縦方向】に均等に配分するためのclass */
 .align-center{
     align-items: center;
@@ -297,10 +301,11 @@ footer .copyright{
 
 header{
     width: auto;
+    max-width: 100vw;
     /* justify-content: space-between; */
     height: auto;
     margin: auto;
-    background-color: var(--main-color);
+    background: var(--main-color);
     padding-right: 1em;
     padding-left: 1em;
 }
@@ -333,9 +338,16 @@ header{
 
 /* キービジュアル部分に適用するスタイル ここから */
 
+#mv-section{
+    padding-top: 0.25em;
+    padding-bottom: 0.5em;
+}
+
 #mv-section .img-pc{
     display: flex;
     width: 100vw;
+    /* max-width: 1080px; */
+    margin: 0 auto;
     height: auto;
 }
 
@@ -349,10 +361,10 @@ header{
 /* キービジュアル以下背景部分に適用するスタイル ここから */
 
 #main-article{
-    background: url(images/background.jpg);
+    background: url(images/background-2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: 50% 75%;
+    background-position-x: center;
 }
 
 /* キービジュアル以下背景部分に適用するスタイル ここまで */
@@ -360,11 +372,21 @@ header{
 
 /* YUMEMi'Z紹介部分に適用するスタイル ここから */
 
+#main-article{
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
 #about-us{
+    width: 100vw;
+    background: url(images/pictures.png);
+    background-position-x: 50%;
+    background-size: cover;
+    background-repeat: none;
     width: auto;
+    max-width: 990px;
+    min-height: 840px;
     margin: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 #about-us h4{
@@ -381,13 +403,13 @@ header{
 }
 
 #about-us .group-introduction{
-    margin: 100px auto 0 auto;
-    width: 30%;
+    margin:auto;
+    width: 357px;
 }
 
 #about-us p{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
 }
 
 #about-us img{
@@ -412,13 +434,13 @@ h5{
 #whats-new{
     width: 90%;
     margin: auto;
-    padding-bottom: 5em;
+    padding-top: 5em;
 }
 
 #whats-new .new-box{
     margin-top: 1em;
     padding: 1em 5px;
-    background-color: var(--main-color);
+    background: var(--main-color);
 }
 
 /* WHAT'S NEW紹介部分に適用するスタイル ここまで */
@@ -429,7 +451,8 @@ h5{
 /* 作者情報に適用するスタイル ここから */
 
 #list-introduction{
-    margin: 4em auto;
+    margin: auto;
+    padding: 4em 0;
     width: 76%;
 }
 
@@ -443,7 +466,8 @@ h5{
 }
 
 #artists{
-    margin: auto 10px 5em 10px;
+    margin: auto 10px;
+    padding-bottom: 5em;
 }
 
 /* ↓DO NOT REWRITE */
@@ -476,7 +500,7 @@ h5{
 
 
 footer{
-    background-color:var(--sub-color3);
+    background: var(--sub-color3);
 }
 
 footer hr{
@@ -495,7 +519,7 @@ footer .project-name{
 
 footer hr{
     height: 3px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     margin: 10px var(--spacingS);
 }
 
@@ -519,7 +543,7 @@ footer .copyright{
     width: 100%;
     height: auto;
     margin: auto;
-    background-color: var(--main-color);
+    background: var(--main-color);
     text-align: center;
 }
 
@@ -529,7 +553,7 @@ footer .copyright{
 
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
 	/* タブレット・スマホ用CSS：PC版コンテンツ幅 (:799px) 以下に適用される */
     #wrapper #wrapper-list{
         max-width: var(--content-width-TABLET);
@@ -556,8 +580,9 @@ footer .copyright{
         max-width: var(--content-width-TABLET);
         min-width: 150px;
         margin: auto;
-        padding: auto 10px;
+        padding: 0.5em 10px;
     }
+
     header h1{
         width: 100px;
         margin: 0;
@@ -571,6 +596,7 @@ footer .copyright{
         width: calc(100% - 100px);
         /* ↑logoの大きさをマイナスする */
     }
+
     header h2{
         width: auto;
         font-weight: bolder;
@@ -614,42 +640,40 @@ footer .copyright{
         }
 
     /* キービジュアル部分に適用するスタイル ここまで */
-        
+    
+    #mv-section{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     /* YUMEMi'Z紹介部分に適用するスタイル ここから */
 
     #about-us{
         width: 100%;
+        min-height: 750px;
         margin: auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        /* background-attachment: scroll; */
+        background-size: cover;
+        background-repeat: no-repeat;
+
     }
 
     #about-us h4{
         font-size: 1.5rem;
-        margin-top: 100px;
-    }
 
-    #about-us p{
-        color: var(--white);
-        font-weight: 400;
-        text-shadow: var(--shadow2);
     }
 
     #about-us .group-introduction{
-        margin: 100px auto 0 auto;
-        width: 45%;
+        margin: 0 auto 0 auto;
+        width: 290px;
     }
 
-    #about-us p{
-        margin-top: 100px;
-    }
-
-    #about-us img{
+    /* #about-us img{
         width: 264px;
         height: 183px;
         object-fit: cover;
         margin: auto;
-    }
+    } */
 
     /* YUMEMi'Z紹介部分に適用するスタイル ここまで */
 
@@ -693,7 +717,6 @@ footer .copyright{
 
 @media screen and (max-width: 480px) {
     body{
-        width: var(--content-width-TABLET);
         font-size: 1rem;
     }
     #wrapper #wrapper-list{
@@ -716,8 +739,7 @@ footer .copyright{
         max-width: var(--content-width-TABLET);
         min-width: 320px;
         margin: auto;
-        padding-right: 0.3em;
-        padding-left: 0.3em;
+        padding: 0 0.3em;
     }
     header nav{
         width: calc(100% - 60px);
@@ -738,9 +760,30 @@ footer .copyright{
         font-size: 0.5rem;
     }
 
+    #main-article{
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    #about-us{
+        width: 100vw;
+        max-width: 100%;
+        margin: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        min-height: 400px;
+        padding-bottom: 2em;
+    }
+
+    #about-us p{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
     #about-us .group-introduction {
-        margin: 100px auto 0 auto;
-        width: 60%;
+        margin: 0 auto 0 auto;
+        width: 210px;
     }
 
     #whats-new{
