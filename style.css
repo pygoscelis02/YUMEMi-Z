@@ -63,19 +63,29 @@
 /* ❕ ↑ DO NOT REWRITE ↑ ❕ */
 
 #wrapper-list{
-    /* width: var(--content-width-PC); */
+    width: 100vw;
     /* min-width: var(--content-width-PC); */
     min-width: var(--min-content-width);
     margin: auto;
     background-image: url(images/background-2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+
+}
+
+#header-list{
+    max-width: var(--content-width-PC);
+    background: var(--main-color);
+}
+
+#body-list{
+    background: var(--main-color);
 }
 
 body{
     font-size: var(--text-size-PC-M);
     margin: 0;
-    background: var(--main-color);
+    /* background: var(--main-color); */
     /* border: 3px solid rgb(255, 255, 255); */
 }
 
@@ -89,7 +99,6 @@ p{
 }
 
 a{
-    font-size: var(--text-size-PC-M);
     padding: 0;
     margin: 0;
     color: var(--right-gray);
@@ -287,7 +296,9 @@ footer .copyright{
 
 /* 📜作者リストに適用するスタイル ここから📜 */
 
-
+#artists a{
+    font-weight: bold; 
+}
 
 /* 📜作者リストに適用するスタイル ここまで📜 */
 
@@ -337,11 +348,6 @@ header{
 
 
 /* キービジュアル部分に適用するスタイル ここから */
-
-#mv-section{
-    padding-top: 0.25em;
-    padding-bottom: 0.5em;
-}
 
 #mv-section .img-pc{
     display: flex;
@@ -466,7 +472,7 @@ h5{
 }
 
 #artists{
-    margin: auto 10px;
+    margin: auto 2em;
     padding-bottom: 5em;
 }
 
@@ -691,6 +697,9 @@ footer .copyright{
 
     /* 作者一覧に適用するスタイル ここから */
 
+    #artists{
+        margin: auto 1em;
+    }
 
     #artists .text p{
         margin-top: 15px;
@@ -730,6 +739,10 @@ footer .copyright{
     p{
         font-size: 0.8rem;
         line-height: 1.75;
+    }
+
+    #artists a{
+        font-size: 0.8rem;
     }
 
     /* 📜文字スタイル-p-ここまで📜 */
