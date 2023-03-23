@@ -57,9 +57,9 @@
 }
 
 /* ↓ 右側に生じる余分なスペースを消すために必要な記述 */
-/* html{
+html{
     width: 100vw;
-} */
+}
 /* ❕ ↑ DO NOT REWRITE ↑ ❕ */
 
 #wrapper-list{
