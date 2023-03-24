@@ -125,6 +125,8 @@ ul{
 
 li {
     list-style: none;
+    color: var(--white);
+    text-shadow: var(--shadow1);
 }
 
 li p{
@@ -374,8 +376,8 @@ header{
 /* YUMEMi'Z紹介部分に適用するスタイル ここから */
 
 #main-article{
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
 }
 
 #about-us{
@@ -443,6 +445,10 @@ h5{
     margin-top: 1em;
     padding: 1em 5px;
     background: var(--main-color);
+}
+
+#whats-new .new-box li:not(:last-child) {
+    margin-bottom: 0.5em;
 }
 
 /* WHAT'S NEW紹介部分に適用するスタイル ここまで */
@@ -757,11 +763,6 @@ footer .copyright{
         margin-top: 5px;
     }
 
-    #main-article{
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-    }
-
     #about-us{
         width: 100vw;
         max-width: 100%;
@@ -782,11 +783,11 @@ footer .copyright{
     }
 
     #whats-new{
-        width: 94%;
+        width: 96%;
     }
 
     #whats-new .new-box{
-        padding: 1em 1.5px;
+        /* padding: 1em 1.5px; */
     }
 
     h3{
