@@ -454,7 +454,7 @@ h5{
 
 #list-introduction{
     margin: auto;
-    padding: 4em 0;
+    padding: 7em 0;
     width: 76%;
 }
 
@@ -713,9 +713,10 @@ footer .copyright{
         font-size: 13px;
     }
 
-    body{
-        /* font-size: 1rem; */
-    }
+    /* body{
+        font-size: 1rem;
+    } */
+
     #wrapper #wrapper-list{
         max-width: var(--content-width-TABLET);
         min-width: var(--min-content-width);
@@ -795,6 +796,10 @@ footer .copyright{
     .profile-image {
         width: 75px;
         height: 75px;
+    }
+
+    #artists .text p{
+        font-size: 0.9em;
     }
 
     .artist-l .profile-image{
